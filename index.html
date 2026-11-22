@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .profile-card {
+            background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+            width: 100%;
+            max-width: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            position: relative;
+            margin: 20px;
+        }
+
+        .cover-photo {
+            width: 100%;
+            height: 140px;
+            background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .share-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-header {
+            padding: 0 20px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: -45px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #2a2a2a;
+            background-color: #000;
+            z-index: 2;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .status-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #ff3333;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #2a2a2a;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .name-display {
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .pronouns {
+            padding: 5px 20px 0 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #b3b3b3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .bio-text {
+            padding: 15px 20px;
+            font-size: 14px;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.6;
+            color: #e0e0e0;
+            white-space: pre-line;
+        }
+
+        .info-container {
+            padding: 0 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .social-box {
+            background-color: #1e2a44;
+            border: 1px solid #2a3b5c;
+            border-radius: 12px;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .social-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .facebook-icon {
+            background-color: #1877f2;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        .social-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .social-sub {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        .friend-count {
+            font-size: 12px;
+            color: #aaa;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="cover-photo">
+            <div class="share-btn">SHARE PROFILE LINK</div>
+        </div>
+
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="https://i.ibb.co/DBLrzWt/avatar.jpg" alt="Avatar">
+                <div class="status-icon">-</div>
+            </div>
+            <div class="name-display">✩. ̊୨୧ Yusei ୧୧. ̊✩</div>
+        </div>
+
+        <div class="pronouns">
+            HARU / HE / HIM /<br>HER / SHE / WIFE / HUSBAND
+        </div>
+
+        <div class="bio-text">
+            Đụng tao cẩn thận 7 mũi dao
+            bakhi.xxx.com.vn · tư duy lớn · đứng
+            đầu chuỗi thức ăn · aura của anh là
+            thứ bọn mày thèm khát
+        </div>
+
+        <div class="info-container">
+            <div class="info-box">
+                <div class="info-label">STATUS</div>
+                <div class="info-value">Trying hard | Sleeping...</div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">TIMEZONE</div>
+                <div class="info-value">UTC+7 | 22/11/2026 09:59:56</div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">COUNTRY</div>
+                <div class="info-value">Vietnam / SEA</div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">BIRTHDAY</div>
+                <div class="info-value">12 / 06 / 2011</div>
+            </div>
+
+            <div class="social-box">
+                <div class="social-info">
+                    <div class="facebook-icon">f</div>
+                    <div>
+                        <div class="social-name">FACEBOOK</div>
+                        <div class="social-sub">Haru · haru...</div>
+                    </div>
+                </div>
+                <div class="friend-count">63 FRIENDS</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+  </html>
